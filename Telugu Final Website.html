@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>నకుల్ ప్రాజెక్ట్</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        .main {
+            padding: 0;
+            margin: auto;
+            height: 600px;
+            width: 100%;
+            font-family: sans-serif;
+            background-color: lightcyan;
+        }
+        #head {
+            height: 10%;
+            margin: auto;
+            text-align: center;
+            display: flex;
+        }
+
+        #menu_button {
+            width: 20%;
+            margin: auto;
+            display: none;
+            z-index: 1;
+        }
+
+        #title {
+            width:80%;
+            margin-left: 10%;
+        }
+
+        #webpage {
+            display: flex;
+            height: 90%;
+        }
+
+        #navbar {
+            width: 20%;
+        }
+
+        #navbar2 {
+            display: none;
+            background-color: darkblue;
+            border-radius: 8px;
+        }
+
+        .toc button {
+            border: none;
+            border-radius: 8px;
+            background-color: blue;
+            height: 25px;
+            width: 80%;
+            color: white;
+        }
+
+        .toc button:hover {
+            box-shadow: 5px 5px darkblue;
+        }
+        
+        .toc2 button {
+            border: none;
+            background-color: darkblue;
+            color: white;
+
+        }
+        .toc2 button:hover {
+            border: 2px solid white;
+            border-radius: 4px;
+        }
+
+        .toc {
+            margin: 10%;
+            align-self: auto;
+        }
+
+        #content {
+            width: 80%;            
+        }
+        a {
+            color: darkblue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: brown;
+        }
+
+        #language {
+            border: 2px solid darkblue;
+            border-radius: 4px;
+            height: 27px;
+            width: 100px;
+            font-size: 25px;
+            margin-right: 10%;
+            margin-top: 20px;
+        }
+        
+        #home {
+            height: 100%;
+        }
+        #education {
+            height: 100%;
+            display: none;
+        }
+        #hobbies {
+            height: 100%;
+            display: none;
+
+        }
+        #family {
+            height: 100%;
+            display: none;
+        }
+        #books {
+            height: 100%;
+            display: none;
+        }
+        #movies {
+            height: 100%;
+            display: none;
+        }
+        #travel {
+            height: 100%;
+            display: none;
+        }
+        #foods {
+            height: 100%;
+            display: none;
+        }
+        #bucket_list {
+            height: 100%;
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            #navbar { 
+                display:none;
+            }
+            #title {
+                font-size: 10px;
+            }
+            #language {
+                height: 17px;
+                width: 100px;
+                font-size: 15px;
+            }
+            #content {
+                width: 100%;
+            }
+            #menu_button {
+                display: block;
+            }
+        }
+
+        @media screen and (min-width: 601px) {
+            #navbar2 {
+                display: none;
+            }
+            #content {
+                width: 80%;
+            }
+            #menu_button {
+                display: none;
+            }
+        }
+        
+    </style>
+        <script>
+            function makeVisible(div_id) {
+                let divs = ['home', 'education', 'hobbies', 'family', 'books', 'movies', 'travel', 'foods', 'bucket_list'];
+                for (const d of divs) {
+                    let doc = document.getElementById(d);
+                    doc.style.display = (d == div_id) ? 'block' : 'none';
+                }
+            }
+
+            function showMenu(val) {
+                let n2 = document.getElementById('navbar2');
+                n2.style.display = (val === true) ? 'block' : 'none';
+            }
+        </script>
+    <body>
+        <div class="main">
+            <div id="head">
+                <div id="menu_button" onmouseover="showMenu(true)" onmouseout="showMenu(false)">
+                Menu &#9776
+                    <!--Navbar 2-->
+                    <div id="navbar2">
+                        <div class="toc2">
+                            <button onclick="makeVisible('home')">
+                                Home
+                            </button>
+                        </div>
+                        <div class="toc2">
+                            <button onclick="makeVisible('education')">
+                                Education
+                            </button>
+                        </div>
+                        <div class="toc2">
+                            <button onclick="makeVisible('hobbies')">
+                                Hobbies
+                            </button>
+                        </div>
+                        <div class="toc2">
+                            <button onclick="makeVisible('family')">
+                                Family
+                            </button>
+                        </div>
+                        <div class="toc2">
+                            <button onclick="makeVisible('books')">
+                                Books
+                            </button>
+                        </div>
+                        <div class="toc2">
+                            <button onclick="makeVisible('movies')">
+                                Movies
+                            </button>
+                        </div>
+                        <div class="toc2">
+                            <button onclick="makeVisible('travel')">
+                                Travel
+                            </button>
+                        </div>
+                        <div class="toc2">
+                            <button onclick="makeVisible('foods')">
+                                Foods
+                            </button>
+                        </div>
+                        <div class="toc2">
+                            <button onclick="makeVisible('bucket_list')">
+                                Bucket List
+                            </button>
+                        </div>
+                    </div>
+                </div>            
+                <div id="title"><h1>నకుల్ ప్రాజెక్ట్</h1></div>
+                <div id="language"><a href="index.html"> EN </a> | <a href="telugu.html"> TE </a></div>
+            </div> 
+            <div id="webpage">
+                <div id="navbar">
+                    <div class="toc">
+                        <button onclick="makeVisible('home')">
+                            Home
+                        </button>
+                    </div>
+                    <div class="toc">
+                        <button onclick="makeVisible('education')">
+                            Education
+                        </button>
+                    </div>
+                    <div class="toc">
+                        <button onclick="makeVisible('hobbies')">
+                            Hobbies
+                        </button>
+                    </div>
+                    <div class="toc">
+                        <button onclick="makeVisible('family')">
+                            Family
+                        </button>
+                    </div>
+                    <div class="toc">
+                        <button onclick="makeVisible('books')">
+                            Books
+                        </button>
+                    </div>
+                    <div class="toc">
+                        <button onclick="makeVisible('movies')">
+                            Movies
+                        </button>
+                    </div>
+                    <div class="toc">
+                        <button onclick="makeVisible('travel')">
+                            Travel
+                        </button>
+                    </div>
+                    <div class="toc">
+                        <button onclick="makeVisible('foods')">
+                            Foods
+                        </button>
+                    </div>
+                    <div class="toc">
+                        <button onclick="makeVisible('bucket_list')">
+                            Bucket List
+                        </button>
+                    </div>
+                </div>
+
+                <div id="content">
+                    <div id="home">
+                        <h1>హోమ్ పేజీ.</h1>
+                        <p>నా పేరు నకుల్ అర్జారపు మరియు నా సైట్‌కి స్వాగతం.
+                            నా వయస్సు 12 సంవత్సరాలు మరియు నేను టెక్సాస్‌లోని ఫ్రిస్కోలో నివసిస్తున్నాను.
+                            నేను ఇప్పుడు 3 నుండి 4 నెలలుగా HTML నేర్చుకుంటున్నాను.
+                            నేను HTML నేర్చుకోవడం ప్రారంభించే ముందు నేను కొంచెం నేర్చుకున్నాను
+                            జావా యొక్క బిట్, మరియు పైథాన్. ఆ భారతీయ భాష
+                            నేను తెలుగు మాట్లాడతాను
+                        </p>
+                        <p>సంప్రదింపు సమాచారం:</p>
+                        <p>Email Address: Nakul.Arjarapu@gmail.com</p>
+                    </div>
+                    <div id="education">
+                        <h1>
+                            చదువు</h1>
+                        <p>పాఠశాల:</p>
+                        <p>
+                            నేను ప్రస్తుతం 7వ తరగతి చదువుతున్నాను మరియు నేను మాస్ మిడిల్‌కు హాజరవుతున్నాను
+                            టెక్సాస్‌లోని ఫ్రిస్కోలో ఉన్న పాఠశాల. ఆ తరగతులు
+                            నేను ప్రధాన తరగతులు, గణితం, సైన్స్, ILA మరియు
+                            సామాజిక అధ్యయనాలు. నేను ఎంపిక చేసుకునే కోర్సులు,
+                            బ్యాండ్, ఇంజనీరింగ్, మరియు బలం & కండిషనింగ్. బ్యాండ్‌లో
+                            నేను బాసూన్ వాయిస్తాను, అది ఒక వాయిద్యం
+                            వుడ్‌విండ్ కుటుంబం కాకుండా. నేను ఏది ఎంచుకుంటే
+                            తరగతి నాకు ఇష్టమైనది, ఎందుకంటే అది బ్యాండ్ అవుతుంది
+                            వాయిద్యం వాయించడం ఎంత సరదాగా ఉంటుందో మిత్రులారా,
+                            మరియు వారు మమ్మల్ని తీసుకెళ్లే అన్ని వినోద యాత్రలు. వినోద యాత్రలు
+                            మాల్‌కి వెళ్లడం, ఆరు జెండాలు కూడా ఉండవచ్చు!
+                        </p>
+                        <p>నేను భవిష్యత్తులో ఏమి చేయాలనుకుంటున్నాను:</p>
+                        <p>భవిష్యత్తులో కంప్యూటర్‌ ఉద్యోగం సాధించడమే నా లక్ష్యం
+                            శాస్త్రవేత్త. నేను కంప్యూటర్ సైంటిస్ట్ అవ్వాలనుకుంటున్నాను, ఎందుకంటే
+                            కోడింగ్‌లో నా ఆసక్తి. నేను భిన్నంగా నేర్చుకోవడం ప్రారంభించాను
+                            నా జీవితంలో ప్రారంభంలోనే భాషలను కోడింగ్ చేస్తున్నాను, కాబట్టి నేను పెద్దయ్యాక
+                            నేను కంప్యూటర్ సైంటిస్ట్‌గా మంచి ఉద్యోగం సంపాదించగలను.
+                        </p>
+                    </div>
+                    <div id="hobbies">
+                        <h1>అభిరుచులు</h1>
+                        <ul>
+                            <li>టైక్వాండో</li>
+                            <li>బాస్కెట్‌బాల్, ఫుట్‌బాల్ మరియు క్రికెట్ వంటి క్రీడలు</li>
+                            <li>బస్సూన్ ఆడుతున్నారు</li>
+                            <li>కోడింగ్</li>
+                            <li>లెగోస్‌ను నిర్మించడం</li>
+                        </ul>
+                    </div>
+                    <div id="family">
+                        <h1>కుటుంబం</h1>
+                        <p>నేను నలుగురి కుటుంబంలో భాగుడిని. మా నాన్న, అమ్మ, అక్క, నేను. మా నాన్న పేరు రాజు.
+                            మా అమ్మ పేరు పావనీ, మా అక్క పేరు రోహిత.
+                            మా నాన్న నోకియాలో పనిచేస్తున్నారు. మేము వారి టెలికమ్యూనికేషన్ ప్రాంతంలో పని చేస్తాము. అది ఏంటి అంటే
+                            అతను కొత్త 5G మరియు టెలికమ్యూనికేషన్‌లకు సంబంధించిన ఏదైనా పరీక్షించడంలో పని చేస్తాడు.
+                            మా అమ్మ సేల్స్‌ఫోర్స్‌లో ఉద్యోగం కోసం పని చేస్తోంది. నా సోదరి కాలేజీలో ఉంది మరియు ఆమె వెళ్తుంది
+                            UT డల్లాస్. ఆమె న్యూరోసైన్స్ చదువుతోంది.
+
+                        </p>
+                    </div>
+                    <div id="family">
+                        <h1>కుటుంబం</h1>
+                        <p>నేను నలుగురి కుటుంబంలో భాగుడిని. మా నాన్న, అమ్మ, అక్క, నేను. మా నాన్న పేరు రాజు.
+                            మా అమ్మ పేరు పావనీ, మా అక్క పేరు రోహిత.
+                            మా నాన్న నోకియాలో పనిచేస్తున్నారు. మేము వారి టెలికమ్యూనికేషన్ ప్రాంతంలో పని చేస్తాము. అది ఏంటి అంటే
+                            అతను కొత్త 5G మరియు టెలికమ్యూనికేషన్‌లకు సంబంధించిన ఏదైనా పరీక్షించడంలో పని చేస్తాడు.
+                            మా అమ్మ సేల్స్‌ఫోర్స్‌లో ఉద్యోగం కోసం పని చేస్తోంది. నా సోదరి కాలేజీలో ఉంది మరియు ఆమె వెళ్తుంది
+                            UT డల్లాస్. ఆమె న్యూరోసైన్స్ చదువుతోంది.
+
+                        </p>
+                    </div>
+                    <div id="books">
+                        <h1>పుస్తకాలు</h1>
+                        <p>చదవడానికి నాకు ఇష్టమైన జానర్ హిస్టారికల్ ఫిక్షన్ లేదా ఫాంటసీ.
+                            నాకు ఇష్టమైన కొన్ని పుస్తకాలలో హ్యారీ పోటర్ సిరీస్ మరియు గ్రెనేడ్ ఉన్నాయి.
+                            నా చదువు స్థాయి 7వ తరగతి. నాకు ఇష్టమైన రచయితలు జె.కె. రౌలింగ్ మరియు అలాన్ గ్రాట్జ్. 
+                        </p>
+                    </div>
+                    <div id="movies">
+                        <h1>Movies</h1>
+                        <h1>సినిమాలు</h1>
+                        <p>నాకు ఇష్టమైన ఆంగ్ల సినిమాలు:</p>
+                        <ul>
+                            <li>ఎవెంజర్స్ ఎండ్ గేమ్</li>
+                            <li>స్పైడర్‌మ్యాన్ నో వే హోమ్</li>
+                            <li>థోర్ రాగ్నరోక్</li>
+                            <li>డాక్టర్ వింత</li>
+                            <li>స్టార్ వార్స్ సిరీస్</li>
+                            <li>హ్యారీ పోటర్ సినిమాలు</li>
+                        </ul>
+                        <p>నాకు ఇష్టమైనవి ఇంగ్లీషు సినిమాలు కాదు:</p>
+                        <ul>
+                            <li>Ip మ్యాన్ సిరీస్</li>
+                            <li>ఆలా వైకుంఠపుర్రములూ </li>
+                            <li>యుద్ధం (హిందీ)</li>
+                            <li>83 (హిందీ)</li>
+                        </ul>
+                    </div>
+                    <div id="travel">
+                        <h1>ప్రయాణం</h1>
+                        <p>నా కుటుంబం విమానంలో కొన్ని ప్రాంతాలకు వెళ్లింది.
+                            మేము భారతదేశం, కాలిఫోర్నియా మొదలైన వాటికి ప్రయాణించాము. నాకు ఇష్టమైన యాత్ర
+                            కాలిఫోర్నియా పర్యటన. నేను అక్కడ చాలా కుటుంబాన్ని సందర్శించాను మరియు
+                            నా కుటుంబం శాన్ ఫ్రాన్సికోలో చాలా ప్రసిద్ధ ప్రదేశాలను చూసింది. భవిష్యత్తులో ఐ
+                            హవాయికి వెళ్లాలనుకుంటున్నాను. నేను బీచ్‌ని ప్రేమిస్తున్నాను కాబట్టి నేను హవాయికి వెళ్లాలనుకుంటున్నాను.
+                            హవాయిలో అద్భుతమైన బీచ్ మరియు అనేక చల్లని రిసార్ట్‌లు ఉన్నాయి, కాబట్టి నేను వెళ్లాలనుకుంటున్నాను
+                            హవాయికి. నేను పెద్దయ్యాక కాలిఫోర్నియాలోని డల్లాస్, TX లేదా LAలో నివసించాలనుకుంటున్నాను
+                            ఎందుకంటే అవి నివసించడానికి రెండు మంచి పట్టణ నగరాలు.
+                        </p>
+                    </div>
+                    <div id="foods">
+                        <h1>ఆహారాలు</h1>
+                        నాకు ఇష్టమైన ఆహారం మెక్సికన్ లేదా ఇటాలియన్, మరియు భారతీయమైనది.
+                        <p>నాకు ఇష్టమైన భోజనం:</p>
+                        <ul>
+                            <li>నేను మరియు పనీర్</li>
+                            <li>క్యూసాడిల్లా </li>
+                            <li>పాస్తా</li>
+                            <li>పిజ్జా</li>
+                            <li>టాకోస్</li>
+                        </ul>
+                        <p>నాకు ఇష్టమైన పానీయాలు:</p>
+                        <ul>
+                            <li>డాక్టర్ పెప్పర్</li>
+                            <li>పెప్సి</li>
+                            <li>పైనాపిల్ ఫాంటా</li>
+                            <li>బోబా టీ</li>
+                            <li>స్లర్పీ</li>
+                        </ul>
+                    </div>
+                    <div id="bucket_list">
+                        <h1>బకెట్ జాబితా</h1>
+                        <ul>
+                            <li>జిప్ లైనింగ్</li>
+                            <li>కయాకింగ్</li>
+                            <liప్రపంచంలోని ఏడు అద్భుతాలను చూడండి</li>
+                            <li>ఈఫిల్ టవర్ చూడండి</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

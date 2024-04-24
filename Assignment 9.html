@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nakul's Project</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .main {
+            padding: 0;
+            margin: auto;
+            height: 600px;
+            width: 100%;
+        }
+        #head {
+            height: 10%;
+            margin: auto;
+            text-align: center;
+            background-color: lightgreen;
+            display: flex;
+
+
+        }
+        #menu_button {
+            width: 20%;
+            margin: auto;
+            display: none;
+            z-index: 1;
+        }
+        #webpage {
+            display: flex;
+            height: 90%;
+        }
+        #navbar {
+            width: 20%;
+            background-color:blue;
+        }
+        #navbar2 {
+            display: none;
+            background-color: YOUR CHOICE;
+            border-radius: 8px;
+        }
+        #content {
+            width: 80%;
+            background-color: lightblue;
+            
+        }
+        #home {
+            height: 100%;
+        }
+        #education {
+            height: 100%;
+            display: none;
+        }
+        #hobbies {
+            height: 100%;
+            display: none;
+
+        }
+        #family {
+            height: 100%;
+            display: none;
+        }
+        #books {
+            height: 100%;
+            display: none;
+        }
+        #movies {
+            height: 100%;
+            display: none;
+        }
+        #travel {
+            height: 100%;
+            display: none;
+        }
+        #foods {
+            height: 100%;
+            display: none;
+        }
+        #bucket_list {
+            height: 100%;
+            display: none;
+        }
+        @media screen and (max-width: 600px) {
+            #navbar {
+                display:none;
+            }
+            #title {
+                font-size: 10px;
+            }
+            #content {
+                width: 100%;
+            }
+            #menu_button {
+                display: block;
+            }
+        }
+        @media screen and (min-width: 601px) {
+            #navbar2 {
+                display: none;
+            }
+            #content {
+                width: 80%;
+            }
+            #menu_button {
+                display: none;
+            }
+        }
+
+
+    </style>
+        <script>
+            function makeVisible(div_id) {
+                console.log(`makeVisible ${div_id}`);
+                let divs = ['home', 'education', 'hobbies', 'family', 'books', 'movies', 'travel', 'foods', 'bucket_list'];
+                for (const d of divs) {
+                    let doc = document.getElementById(d);
+                    doc.style.display = (d == div_id) ? 'block' : 'none';
+                }
+            }
+            function showMenu(val) {
+                let n2 = document.getElementById('navbar2');
+                n2.style.display = (val === true) ? 'block' : 'none';
+            }
+        </script>
+    <body>
+        <div class="main">
+            <div id="head">
+                <p>Nakul's Website.</p>
+            </div>
+            <div id="webpage">
+                <div id="navbar">
+                    <div id="head">
+                        <div id="menu_button" onmouseover="showMenu(true)" onmouseout="showMenu(false)">
+                        Menu &#9776
+                            <!--Navbar 2-->
+                            <div id="navbar2">
+                                <div class="toc2">
+                                    <button onclick="makeVisible('home')">
+                                        Home
+                                    </button>
+                                </div>
+                                <div class="toc2">
+                                    <button onclick="makeVisible('education')">
+                                        Education
+                                    </button>
+                                </div>
+                                <div class="toc2">
+                                    <button onclick="makeVisible('hobbies')">
+                                        Hobbies
+                                    </button>
+                                </div>
+                                <div class="toc2">
+                                    <button onclick="makeVisible('family')">
+                                        Family
+                                    </button>
+                                </div>
+                                <div class="toc2">
+                                    <button onclick="makeVisible('books')">
+                                        Books
+                                    </button>
+                                </div>
+                                <div class="toc2">
+                                    <button onclick="makeVisible('movies')">
+                                        Movies
+                                    </button>
+                                </div>
+                                <div class="toc2">
+                                    <button onclick="makeVisible('travel')">
+                                        Travel
+                                    </button>
+                                </div>
+                                <div class="toc2">
+                                    <button onclick="makeVisible('foods')">
+                                        Foods
+                                    </button>
+                                </div>
+                                <div class="toc2">
+                                    <button onclick="makeVisible('bucket_list')">
+                                        Bucket List
+                                    </button>
+                                </div>
+                            </div>
+                        </div>            
+                        <div id="title"><h1>Nakul's Project</h1></div>
+                    </div>
+                    <div>
+                        <button onclick="makeVisible('home')">
+                            Home
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="makeVisible('education')">
+                            Education
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="makeVisible('hobbies')">
+                            Hobbies
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="makeVisible('family')">
+                            Family
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="makeVisible('books')">
+                            Books
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="makeVisible('movies')">
+                            Movies
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="makeVisible('travel')">
+                            Travel
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="makeVisible('foods')">
+                            Foods
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="makeVisible('bucket_list')">
+                            Bucket List
+                        </button>
+                    </div>
+                </div>
+                <div id="content">
+                    <div id="home">
+                        <h1>Home Page.</h1>
+                        <p>My name is Nakul Arjarapu and welcome to my site.
+                            I am 12 years old and I live in Frisco, Texas.
+                            I have been learing HTML for 3 to 4 months now. 
+                            Before I started learning HTML I learned a little
+                            bit of Java, and Python. The Indian language that
+                            I speak is Telugu. 
+                        </p>
+                        <p>Contact Info:</p>
+                        <p>Email Address: Nakul.Arjarapu@gmail.com</p>
+                    </div>
+                    <div id="education">
+                        <h1>Education</h1>
+                        <p>School:</p>
+                        <p>
+                            I am currently in 7th grade and I attend Maus Middle
+                            School which is in Frisco, Texas. The classes that 
+                            I take include, the core classes, Math, Science, ILA, and 
+                            Social Studies. The elective courses that I take is,
+                            band, engineering, and strength & conditioning. In band 
+                            I play the bassoon, which is an instrument that is 
+                            apart of the woodwind family. If I were to pick which
+                            class is my favorite it would be band, because
+                            of how much fun it is to play an instrument, friends,
+                            and all the fun trips they take us on. The fun trips
+                            include going to the mall, maybe even six flags!
+                        </p>
+                        <p>What I want to do in the Future:</p>
+                        <p>In the future my goal is to get a job as a computer
+                            scientist. I want to become a computer scientist, because
+                            of my interst in coding. I am starting to learn different
+                            coding languages early in my life, so whenever I get older
+                            I could get a good job as a computer scientist. 
+                        </p>
+                
+                    </div>
+                    <div id="hobbies">
+                        <h1>Hobbies</h1>
+                        <ul>
+                            <li>Taekwondo</li>
+                            <li>Sports like, basketball, football and cricket</li>
+                            <li>Playing bassoon</li>
+                            <li>Coding</li>
+                            <li>Building Legos</li>
+                        </ul>
+                    </div>
+                    <div id="family">
+                        <h1>Family</h1>
+                        <p>I am part of a family of four. My Dad, mom, older sister, and me. My dad's name is Raju,
+                            my mom's name is Paawany, and my older sister's name is Rohita. 
+                            My dad works for Nokia. We works in their telecommunication area. That means
+                            he works on testing new 5G and anything that is related to telecommunications.
+                            My mom is working on getting a job in salesforce. My sister is in college and she goes to 
+                            UT Dallas. She is studying neuroscience. 
+                        </p>
+                    </div>
+                    <div id="books">
+                        <h1>Books</h1>
+                        <p>My favorite genre to read is either historical fiction or fantasy.
+                            Some of my favorite books include, the Harry Potter series, and Grenade.
+                            My reading level is 7th grade. My favorite authors are J.K. Rowling and Alan Gratz. 
+                        </p>
+                    </div>
+                    <div id="movies">
+                        <h1>Movies</h1>
+                        <p>My Favorite English Movies:</p>
+                        <ul>
+                            <li>Avengers Endgame</li>
+                            <li>Spiderman No Way Home</li>
+                            <li>Thor Ragnarok</li>
+                            <li>Doctor Strange</li>
+                            <li>Star Wars Series</li>
+                            <li>Harry Potter Movies</li>
+                        </ul>
+                        <p>My Favorite Not English Movies:</p>
+                        <ul>
+                            <li>Ip Man Series</li>
+                            <li>Ala vaikunthapurramuloo </li>
+                            <li>War (Hindi)</li>
+                            <li>83 (Hindi)</li>
+                        </ul>
+                    </div>
+                    <div id="travel">
+                        <h1>Travel</h1>
+                        <p>My family has travled a few places via plane.
+                            We traveled to India, California etc. My favorite trip 
+                            was the California trip. I visted a lot of family there and
+                            my family saw many famous places in San Fransico. In the future I 
+                            want to travel to Hawaii. I want to travel to Hawaii because I love the beach.
+                            Hawaii has an excellent beach and many cool resorts, so I want to go 
+                            to Hawaii. I want to live in Dallas, TX or LA, California when I grow up 
+                            because those are two really good urban cities to live in. 
+                        </p>
+                    </div>
+                    <div id="foods">
+                        <h1>Foods</h1>
+                        My favroite kind of food is either Mexican or Italian, and of course Indian.
+                        <p>My Favorite Meals:</p>
+                        <ul>
+                            <li>Naan and Paneer</li>
+                            <li>Quesidilla </li>
+                            <li>Pasta</li>
+                            <li>Pizza</li>
+                            <li>Tacos</li>
+                        </ul>
+                        <p>My Favorite Drinks:</p>
+                        <ul>
+                            <li>Dr. Pepper</li>
+                            <li>Pepsi</li>
+                            <li>Pineapple Fanta</li>
+                            <li>Boba Tea</li>
+                            <li>Slurpee</li>
+                        </ul>
+                        
+                    </div>
+                    <div id="bucket_list">
+                        <h1>Bucket List</h1>
+                        <ul>
+                            <li>Ziplining</li>
+                            <li>kayaking</li>
+                            <li>See all seven wonders of the world</li>
+                            <li>See Eiffel Tower</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

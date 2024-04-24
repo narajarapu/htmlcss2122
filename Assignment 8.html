@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nakul's Project</title>
+    </head>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .main {
+            padding: 0;
+            margin: auto;
+            height: 600px;
+            width: 100%;
+        }
+        #head {
+            height: 10%;
+            margin: auto;
+            text-align: center;
+            background-color: lightgreen;
+        }
+        #webpage {
+            display: flex;
+            height: 90%;
+        }
+        #navbar {
+            width: 20%;
+            background-color:blue;
+        }
+        #content {
+            width: 80%;
+            background-color: lightblue;
+            
+        }
+        #home {
+            height: 100%;
+        }
+        #education {
+            height: 100%;
+            display: none;
+        }
+        #hobbies {
+            height: 100%;
+            display: none;
+
+        }
+        #family {
+            height: 100%;
+            display: none;
+        }
+        #books {
+            height: 100%;
+            display: none;
+        }
+        #movies {
+            height: 100%;
+            display: none;
+        }
+        #travel {
+            height: 100%;
+            display: none;
+        }
+        #foods {
+            height: 100%;
+            display: none;
+        }
+        #bucket_list {
+            height: 100%;
+            display: none;
+        }
+
+    </style>
+        <script>
+            function makeVisible(div_id) {
+                console.log(`makeVisible ${div_id}`);
+                let divs = ['home', 'education', 'hobbies', 'family', 'books', 'movies', 'travel', 'foods', 'bucket_list'];
+                for (const d of divs) {
+                    let doc = document.getElementById(d);
+                    doc.style.display = (d == div_id) ? 'block' : 'none';
+                }
+            }
+        </script>
+    <body>
+        <div class="main">
+            <div id="head">
+                <p>Nakul's Website.</p>
+            </div>
+            <div id="webpage">
+                <div id="navbar">
+                    <div>
+                        <button onclick="makeVisible('home')">
+                            Home
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="makeVisible('education')">
+                            Education
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="makeVisible('hobbies')">
+                            Hobbies
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="makeVisible('family')">
+                            Family
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="makeVisible('books')">
+                            Books
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="makeVisible('movies')">
+                            Movies
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="makeVisible('travel')">
+                            Travel
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="makeVisible('foods')">
+                            Foods
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="makeVisible('bucket_list')">
+                            Bucket List
+                        </button>
+                    </div>
+                </div>
+                <div id="content">
+                    <div id="home">
+                        <p>Home Page.</p>
+                    </div>
+                    <div id="education">
+                        <h1>Education</h1>
+                
+                    </div>
+                    <div id="hobbies">
+                        <p>Hobbies</p>
+                    </div>
+                    <div id="family">
+                        <p>Family</p>
+                    </div>
+                    <div id="books">
+                        <p>Books</p>
+                    </div>
+                    <div id="movies">
+                        <p>Movies</p>
+                    </div>
+                    <div id="travel">
+                        <p>Travel</p>
+                    </div>
+                    <div id="foods">
+                        <p>Foods</p>
+                    </div>
+                    <div id="bucket_list">
+                        <p>Bucket List</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
